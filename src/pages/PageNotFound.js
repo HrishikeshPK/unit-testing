@@ -1,6 +1,5 @@
-
-import { Link } from "react-router"
-import PageNotFoundImage  from "../assets/page-not-found.jpg";
+import { Link } from "react-router-dom"; // Corrected the import path
+import PageNotFoundImage from "../assets/page-not-found.jpg";
 
 export const PageNotFound = () => {
   return (
@@ -8,12 +7,12 @@ export const PageNotFound = () => {
       <section className="pnf">
         <div className="oops">
           <p data-testid="pnfText">Oops - Page Not Found!</p>
-          <img src={PageNotFoundImage } alt="" />
-          <Link to="/">
+          <img src={PageNotFoundImage} alt="Page Not Found" />
+          <Link data-testid="homeLink" to="/">
             <button data-testid="homeBtn">Go Back To Word Counter</button>
           </Link>
         </div>
       </section>
     </main>
-  )
-}
+  );
+};

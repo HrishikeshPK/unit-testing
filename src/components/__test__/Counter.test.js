@@ -45,7 +45,7 @@ describe("Counter Component Test",()=>{
         expect(wordLength).toHaveTextContent("Word: 1");
 
         fireEvent.click(clearBtn)                                 // we can use fireEvent or userEvent
-        expect(charLength.innerHTML).toBe("Character: 0")
+        expect(charLength.innerHTML).toBe("Character: 0") 
         expect(wordLength.innerHTML).toBe("Word: 0")
     });
 })
